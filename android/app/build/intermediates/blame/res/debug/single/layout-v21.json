@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "D:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-compat\\27.0.2\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "D:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "D:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-compat\\27.0.2\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "D:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-compat\\27.0.2\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "D:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\support-compat\\27.0.2\\res\\layout-v21\\notification_action.xml"
+    }
+]

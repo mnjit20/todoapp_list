@@ -3,6 +3,24 @@
 
     <item
         is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ed6560f31a6a40b5965f5879d8f2eab1f68def05">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-27.0.2_86d8ba186c2ed8468606f2c32e91cdb569a54f5d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_0d01b273ae1c1f3f909279859bd1e418376ee565.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -12,30 +30,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\27.0.2\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_edfca8b84868a864529043d3703e9a02fe735c2c.jar" />
+        revision="26.0.1"
+        sha1="ac2ce6027755bcf49442e70597bec0feb9064f68">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-27.0.2_adf90046faeebcd208eb838bf945653e02eac806.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\DB\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_a7812a05fe4e64739e9f7c685e60c73a08c4cc32.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_1ab13a84874499fc8af017d71e2bf5ae7abf03f3.jar" />
+        revision="26.0.1"
+        sha1="e31331bdf6b5952badadbfc171f04b95c55d3b16">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.55.4_700c095c1ea8843dfce9aca8044fc27087eb0723.jar" />
     </item>
     <item
         is-multidex="false"
@@ -48,12 +57,39 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\27.0.2\b9ef4342c934a1a8b107506273dc8061662a322\support-annotations-27.0.2.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_da102a09ed87873003365ce5a635c02dcc3f4a64.jar" />
+        revision="26.0.1"
+        sha1="0b9ef4342c934a1a8b107506273dc8061662a322">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\support-annotations-27.0.2_85c142fc611f1cb55633d7df53ddc637d2240359.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_edfca8b84868a864529043d3703e9a02fe735c2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_5f2256407cd85abf831d62eaf9240861939e7186.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_a8d027ab385c83cd5026af351e97708420de516e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -66,12 +102,75 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_94810467d093bbc0b0096d1073f53d37ce7c7004.jar" />
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_d39f76c9ed5228b7f53f7ba59c32e36ea75a0e1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_1ab13a84874499fc8af017d71e2bf5ae7abf03f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_a06e77cd3b7821ecfd5d29266b06d6b7122910e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_f9c8022d414d330035f5c0da63fbf1574891a4e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="14bfdbf5594d4d7c320de20831849050788ab1e3">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-27.0.2_b435e92f01cee942dc20e4b7720f458add8389fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_d082bccbe25350aebf2898cc8d274090d83b1343.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-login\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0f5aec8dc543f3bae42c156cffe3c294c7cedd71">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-login-4.34.0_35a10992b87b94f7e3c21613e5f03a90c612b5d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-core\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a8911a244008ee1931a1d216683c7fadf44f8cb1">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-core-4.34.0_f4b8ecab54ff6276fd937deb250fc72ed4b49021.jar" />
     </item>
     <item
         is-multidex="false"
@@ -84,57 +183,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\libs\infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_801d7f24491ce60cac871b1db1323d2f556b4ddf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_93142df17fd40f8ac48ca2d9a8f4ee920651c14f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_a8d027ab385c83cd5026af351e97708420de516e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_d39f76c9ed5228b7f53f7ba59c32e36ea75a0e1e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_d082bccbe25350aebf2898cc8d274090d83b1343.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
+        revision="26.0.1"
         sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
         <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_bf0278ae142e18bad3b8ffb781a89a48dce386a2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="618f75fe11febf263e3234c7da7dc892232a5608">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-27.0.2_0af466c447d63259a4c01d523cfc8689df139a82.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\todoapp_list\react-native-fbsdk\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f90c7e695e3c486f8a900c0e97eeeaa99a7e2d55">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\todoapp_list-react-native-fbsdk-unspecified_5d3a34eed3ae1dff685e10b968f2a3113cd379ca.jar" />
     </item>
     <item
         is-multidex="false"
@@ -147,21 +219,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_c25b6ee0b6414ce0eeb44ed1f748c767cdfc169f.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
         <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_5f2256407cd85abf831d62eaf9240861939e7186.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fe3916317a699975bcce0cba2d13fd2d8cf88922">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-27.0.2_172480273c4468d5b7096ef65fc0c43b6786ab84.jar" />
     </item>
     <item
         is-multidex="false"
@@ -174,21 +246,309 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_9b56646cab56a901f7a85e62e2d418e66221a6d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="caa03787689212c10939f308a55a8dc8a3333ed2">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-27.0.2_f7bc34bc03541bd7a9289b9b07733ddd39513875.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_0d01b273ae1c1f3f909279859bd1e418376ee565.jar" />
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_edfca8b84868a864529043d3703e9a02fe735c2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bcd0bcdef85b31a656af76e39c0c95ce70800772">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-27.0.2_c854a4235363ab6b55ce418a936be9fca6698805.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="04cd0cacbedcb338f64665b88bad64d145325fbd">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-27.0.2_b9d00feced62c3080c6907c0f2ae2e6dee21bd15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_c1f3852c4d40d4dd952672deb3e7d64c04d8fcee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_d39f76c9ed5228b7f53f7ba59c32e36ea75a0e1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.3\7d7f60c4783872861222166f6164215f8951c7b1\common-1.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7d7f60c4783872861222166f6164215f8951c7b1">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\common-1.0.3_ac14071c0e25a34b311414f7e09d1eac29b90d5b.jar" />
     </item>
     <item
         is-multidex="false"
         jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
+        revision="26.0.1"
         sha1="6975da39a7040257bd51d21a231b76c915872d38">
         <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_f9c8022d414d330035f5c0da63fbf1574891a4e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-places\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bf4bf12d956dcfa2ad8c5d909a1074cac6aa0970">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-places-4.34.0_e48aad5b18763989de6a3e5f3620f4aeccde4950.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_a8d027ab385c83cd5026af351e97708420de516e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_bf0278ae142e18bad3b8ffb781a89a48dce386a2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\android.arch.lifecycle\runtime\1.0.3\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7cc5473b9cf4ea159a263cd477fb3ecb2987b96">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\android.arch.lifecycle-runtime-1.0.3_9461bac113379b7240a579f7a9a3e05520320078.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_801d7f24491ce60cac871b1db1323d2f556b4ddf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_da102a09ed87873003365ce5a635c02dcc3f4a64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\bolts-applinks-1.4.0_d24d600560dca677cc2f2ef8727c4b7b65e7cca3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-common\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cc769cacf36738234b19c92791bebd5304638dd4">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-common-4.34.0_255de0afb7d927c778a817ec75a63925edcc3491.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.3.0\73c49077166faa4c3c0059c5f583d1d7bd1475fe\core-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\core-3.3.0_9e7c35896900bda0e079ff6c6e8431bbfe3071c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b432e82447a3af781e927b9ba0bbb9fe2a496d4a">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-27.0.2_ce35fd26c8a6c75c9e732e416cc46433742d9f98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\customtabs\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cdebcd9e0580b35115f655f8dc8ed7a66a8ef0fc">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-customtabs-27.0.2_1bfca0971e955b90804ae53fd73c9a5cd0f3da64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_1ab13a84874499fc8af017d71e2bf5ae7abf03f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\27.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="25c8cb628374f9a2d59ff9e1172753751e9a9f84">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-27.0.2_8d412f3e68b1d7b5634b4e752277b2fdb41dcfc6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b1c250352bb7bbd5ea1982ca5165f2a81f36b530">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-android-sdk-4.34.0_c4d9215a93baa135016eb13f65e84539e6620bc0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_da102a09ed87873003365ce5a635c02dcc3f4a64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-marketing\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b4f7d12c6719fac27917501d735e68b35a727d8f">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-marketing-4.34.0_0bdcf10d578d9e08b160c2bbf469c1572aac497c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_801d7f24491ce60cac871b1db1323d2f556b4ddf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_fc4a75442e4e7bd2f3cea8aced67b93b7cea7e3e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_d082bccbe25350aebf2898cc8d274090d83b1343.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-messenger\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6d3dda07fbd30171edc150e4f13884fce5cd9926">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-messenger-4.34.0_963addf6adf25982979c53b7c13c4290bab73ee7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_4211dd2c0283c0555dccf37b8a401580c7873b57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-share\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f64aa03e24769f0e10f35f1c08e4d004b5db067b">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-share-4.34.0_4660600535064c833ca1fb12243a285a82af4dde.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\common-1.0.0_ed2d43c6d403bf984d73faaec58de258be7bd0a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\node\react\todoapp_list\android\app\build\intermediates\exploded-aar\com.facebook.android\facebook-applinks\4.34.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="82ea5a937ab84229fbd2f3fc8cf2a72cbdf0ee0f">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-applinks-4.34.0_11b104891966715a759fb9e95733a3e7cb5f4aab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\DB\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="D:\node\react\todoapp_list\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_0d01b273ae1c1f3f909279859bd1e418376ee565.jar" />
     </item>
 
 </items>

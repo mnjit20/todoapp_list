@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Platform, ListView, Keyboard } from 'react-nati
 import Header from './header';
 import Footer from './footer';
 import Item from './item';
-
+import FBLogin from './fb_login';
 
 
 class App extends React.Component {
@@ -71,6 +71,7 @@ class App extends React.Component {
           onAddItem={this.handleAddItems}
           onChange={(value) => this.setState({ value })}
         />
+        <FBLogin />
         <View style={styles.content}>
           <ListView
             style={styles.list}
