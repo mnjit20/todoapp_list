@@ -4,6 +4,7 @@ import Header from './header';
 import Footer from './footer';
 import Item from './item';
 import FBLogin from './fb_login';
+//import FBLogin from './fb_login';
 
 
 class App extends React.Component {
@@ -14,8 +15,12 @@ class App extends React.Component {
     this.state = {
       value: "",
       items: [],
-      dataSource: ds.cloneWithRows([])
+      dataSource: ds.cloneWithRows([]),
+      username: "",
+      email: "",
+      accesstoken: ""
     }
+
     this.handleAddItems = this.handleAddItems.bind(this);
     this.setSource = this.setSource.bind(this);
     this.handleToggleComplete = this.handleToggleComplete.bind(this);
@@ -65,37 +70,44 @@ class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Header
-          value={this.state.value}
-          onAddItem={this.handleAddItems}
-          onChange={(value) => this.setState({ value })}
-        />
+
+      <View style={styles.mainContainer}>
+        <Text style={styles.title}> Login using facebook </Text>
+
         <FBLogin />
-        <View style={styles.content}>
-          <ListView
-            style={styles.list}
-            enableEmptySections
-            dataSource={this.state.dataSource}
-            onScroll={() => Keyboard.dismiss()}
-            renderRow={({ key, ...value }) => {
-              return (
-                <Item
-
-                  key={key}
-                  onComplete={(complete) => this.handleToggleComplete(key, complete)}
-                  {...value}
-                />
-              )
-            }}
-            renderSeparator={(sectionId, rowId) => {
-              return <View key={rowId} style={styles.separator} />
-            }}
-          />
-
-        </View>
-        <Footer />
       </View>
+
+      // <View style={styles.container}>
+      //   <Header
+      //     value={this.state.value}
+      //     onAddItem={this.handleAddItems}
+      //     onChange={(value) => this.setState({ value })}
+      //   />
+      //   <FBLogin />
+      //   <View style={styles.content}>
+      //     <ListView
+      //       style={styles.list}
+      //       enableEmptySections
+      //       dataSource={this.state.dataSource}
+      //       onScroll={() => Keyboard.dismiss()}
+      //       renderRow={({ key, ...value }) => {
+      //         return (
+      //           <Item
+
+      //             key={key}
+      //             onComplete={(complete) => this.handleToggleComplete(key, complete)}
+      //             {...value}
+      //           />
+      //         )
+      //       }}
+      //       renderSeparator={(sectionId, rowId) => {
+      //         return <View key={rowId} style={styles.separator} />
+      //       }}
+      //     />
+
+      //   </View>
+      //   <Footer />
+      // </View>
     );
   }
 }
@@ -126,6 +138,24 @@ const styles = StyleSheet.create({
   }, separator: {
     borderWidth: 1,
     borderColor: "#f5f5f5"
+  },
+
+
+
+  mainContainer: {
+    flex: 1,
+    padding: 30,
+    marginTop: 65,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: '#48BBEC'
+  },
+
+  title: {
+    marginBottom: 20,
+    fontSize: 25,
+    textAlign: 'center',
+    color: '#fff'
   }
 });
 
