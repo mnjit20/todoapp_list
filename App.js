@@ -4,7 +4,7 @@ import Header from './header';
 import Footer from './footer';
 import Item from './item';
 import FBLogin from './fb_login';
-//import FBLogin from './fb_login';
+import { createStackNavigator } from 'react-navigation';
 
 
 class App extends React.Component {
@@ -138,8 +138,6 @@ const styles = StyleSheet.create({
 
   mainContainer: {
     flex: 1,
-    padding: 30,
-    marginTop: 65,
     flexDirection: 'column',
     justifyContent: 'center',
     backgroundColor: '#48BBEC'
