@@ -15,10 +15,12 @@ class FBLogin extends Component {
       social_id: "",
       social_loggedIn: "",
       social_email: "",
-      auth_token: ""
+      auth_token: "",
+      error: ''
     }
 
     this.handleSocialLoginSubmit = this.handleSocialLoginSubmit.bind(this);
+    this.showUserStatus = this.showUserStatus.bind(this);
 
   }
 
@@ -29,9 +31,9 @@ class FBLogin extends Component {
     console.log('this is the token', token);
   }
 
-
-  printHello = (value) => {
-    console.log('Hello is printing ', value);
+  showUserStatus() {
+    console.log(' State value ====================================== ');
+    console.log(this.state.social_name);
   }
 
 
@@ -43,14 +45,18 @@ class FBLogin extends Component {
       .then((response) => { return response.json() })
       .then((json) => {
         // Some user object has been set up somewhere, build that user here
-        user.name = json.name
-        user.id = json.id
-        user.user_friends = json.friends
-        user.email = json.email
-        user.username = json.name
-        user.loading = false
-        user.loggedIn = true
-        console.log('=============', user);
+        console.table(json);
+
+        this.setState({
+          auth_token: token,
+          social_name: json.name,
+          social_id: json.id,
+          social_loggedIn: true,
+          social_email: json.email
+        })
+
+
+        this.showUserStatus();
       })
       .catch((err) => {
         console.log('ERROR GETTING DATA FROM FACEBOOK', err);
@@ -59,36 +65,32 @@ class FBLogin extends Component {
 
 
   _fbAuth() {
-
     var that = this;
     console.log('called');
-
-
     LoginManager.logInWithReadPermissions(['public_profile', 'email']).then(function (result) {
       if (result.isCancelled) {
         alert(JSON.stringfy(result));
         alert("Login Cancelled");
+        that.setState({
+          error: 'Login Canelled by User'
+        })
       } else {
         AccessToken.getCurrentAccessToken().then(
           (data) => {
             const { accessToken } = data;
             //alert(data.accessToken.toString())
             console.log('data', data);
-            //initUser(accessToken)
-            //this.initUser('aa');
-
             console.log('............. ', that.state.user_name);
             that.initUser(accessToken);
-
-
           }
         )
       }
     }, function (error) {
       alert("some error occurred!!");
+      that.setState({
+        error: 'Something went wrong'
+      })
     })
-
-    this.printHello('=========== mu from outside');
   }
 
 

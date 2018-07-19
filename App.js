@@ -58,12 +58,6 @@ class App extends React.Component {
         complete: false
       }
     ]
-    // this.setState({
-    //   items: newItems,
-    //   value: ""
-
-    // }) 
-
     this.setSource(newItems, newItems, { value: "" });
     console.table(newItems);
   }
