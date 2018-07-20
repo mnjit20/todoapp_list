@@ -6,6 +6,7 @@ class Item extends Component {
   // Component for creating list of to do task
   render() {
     const { complete } = this.props;
+    console.log('this.props item ', this.props);
     return (
       <View style={styles.container}>
         <Switch

@@ -4,28 +4,38 @@ import { StyleSheet, Text, Button, View, Platform, ListView, Keyboard } from 're
 import Header from './header';
 import Footer from './footer';
 import Item from './item';
+import UserLoginStatus from './userloginstatus';
 
 
-class ProfileScreen extends React.Component {
+
+class TodoScreen extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log('props from profile ', props);
+    console.log('aaaaaaaaaaaaaaa', props.navigation);
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
     this.state = {
       value: "",
       items: [],
       dataSource: ds.cloneWithRows([]),
-      username: "",
-      email: "",
-      accesstoken: ""
+      social_name: props.navigation.state.params.social_name,
+      social_email: props.navigation.state.params.social_email,
+      social_id: props.navigation.state.params.social_id,
+      social_loggedIn: "",
+      auth_token: props.navigation.state.params.auth_token
     }
 
     this.handleAddItems = this.handleAddItems.bind(this);
     this.setSource = this.setSource.bind(this);
     this.handleToggleComplete = this.handleToggleComplete.bind(this);
+
+    console.log('this', this);
   }
+
+  static navigationOptions = {
+    title: 'ToDo App task'
+  };
+
 
   setSource(items, itemsDatasource, otherState = {}) {
     this.setState({
@@ -66,13 +76,19 @@ class ProfileScreen extends React.Component {
 
 
   static navigationOptions = {
-    title: 'ToDo App',
+    title: 'Your ToDo App',
   };
+
   render() {
     const { navigate } = this.props.navigation;
     return (
 
       <View style={styles.container}>
+        <UserLoginStatus
+          name={this.state.social_name}
+
+        />
+
         <Header
           value={this.state.value}
           onAddItem={this.handleAddItems}
@@ -89,7 +105,7 @@ class ProfileScreen extends React.Component {
             renderRow={({ key, ...value }) => {
               return (
                 <Item
-
+                  xyz={'aa'}
                   key={key}
                   onComplete={(complete) => this.handleToggleComplete(key, complete)}
                   {...value}
@@ -135,7 +151,7 @@ const styles = StyleSheet.create({
       },
       android: {
         backgroundColor: '#fff',
-        paddingTop: 50
+        paddingTop: 5
       },
     })
   },
@@ -169,4 +185,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default ProfileScreen;
+export default TodoScreen;

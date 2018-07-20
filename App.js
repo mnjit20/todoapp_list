@@ -16,11 +16,11 @@ import {
   createStackNavigator,
 } from 'react-navigation';
 
-import HomeScreen from './homescreen';
-import ProfileScreen from './profilescreen';
+import loginscreen from './loginscreen';
+import TodoScreen from './todoscreen';
 const App = createStackNavigator({
-  Home: { screen: HomeScreen },
-  Profile: { screen: ProfileScreen },
+  Login: { screen: loginscreen },
+  ToDoList: { screen: TodoScreen },
 });
 
 export default App;
