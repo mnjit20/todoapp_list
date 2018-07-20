@@ -13,12 +13,9 @@ class UserLoginStatus extends Component {
           <TouchableOpacity>
             <Text> Hi {this.props.name}</Text>
           </TouchableOpacity>
-
           <TouchableOpacity>
             <Text> Logout </Text>
           </TouchableOpacity>
-
-
         </View>
       </View>
     );

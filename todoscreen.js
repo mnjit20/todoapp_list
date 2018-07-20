@@ -28,7 +28,7 @@ class TodoScreen extends React.Component {
     this.handleAddItems = this.handleAddItems.bind(this);
     this.setSource = this.setSource.bind(this);
     this.handleToggleComplete = this.handleToggleComplete.bind(this);
-
+    this.handleRemove = this.handleRemove.bind(this);
     console.log('this', this);
   }
 
@@ -73,7 +73,13 @@ class TodoScreen extends React.Component {
     console.table(newItems);
   }
 
-
+  handleRemove(key) {
+    const newItems = this.state.items.filter((item) => {
+      console.log("item.key", item.key);
+      return item.key != key
+    })
+    this.setSource(newItems, newItems);
+  }
 
   static navigationOptions = {
     title: 'Your ToDo App',
@@ -107,6 +113,7 @@ class TodoScreen extends React.Component {
                 <Item
                   xyz={'aa'}
                   key={key}
+                  onRemove={() => this.handleRemove(key)}
                   onComplete={(complete) => this.handleToggleComplete(key, complete)}
                   {...value}
                 />

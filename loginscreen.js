@@ -37,13 +37,13 @@ class LoginScreen extends React.Component {
     console.log('init working');
     var user = {};
 
+
+
     navigate('ToDoList', {
-      social_name: 'manjeet v',
-      social_id: '101901009019101 random',
-      social_loggedIn: true,
-      social_email: 'mnjit1989@aa.com',
-      auth_token: 'accessToken'
+      social_name: 'Manjeet',
+
     });
+
 
 
     // this.setState({
@@ -58,13 +58,26 @@ class LoginScreen extends React.Component {
     //   .then((response) => { return response.json() })
     //   .then((json) => {
     //     console.table(json);
-    //     this.setState({
-    //       auth_token: accessToken,
+
+
+    //     navigate('ToDoList', {
     //       social_name: json.name,
     //       social_id: json.id,
     //       social_loggedIn: true,
-    //       social_email: json.email
-    //     })
+    //       social_email: json.email,
+    //       auth_token: accessToken
+    //     });
+
+
+    //     // this.setState({
+    //     //   auth_token: accessToken,
+    //     //   social_name: json.name,
+    //     //   social_id: json.id,
+    //     //   social_loggedIn: true,
+    //     //   social_email: json.email
+    //     // })
+
+
     //     console.log(this.state.social_name);
 
 
