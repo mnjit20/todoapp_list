@@ -41,9 +41,6 @@ class LoginScreen extends React.Component {
       checkedSignIn: false
     }
 
-    //    this.handleSocialLoginSubmit = this.handleSocialLoginSubmit.bind(this);
-    //  this.showUserStatus = this.showUserStatus.bind(this);
-    //this.initUser = this.initUser.bind(this);
   }
 
   static navigationOptions = {
@@ -60,13 +57,13 @@ class LoginScreen extends React.Component {
     var user = {};
 
 
-    onSignIn();
+    // onSignIn();
 
-    navigate('ToDoList', {
-      social_name: 'Manjeet',
-      social_id: "10919102982992",
-      social_email: "mnjit1989@gmail.com"
-    });
+    // navigate('ToDoList', {
+    //   social_name: 'Manjeet',
+    //   social_id: "10919102982992",
+    //   social_email: "mnjit1989@gmail.com"
+    // });
 
 
 
@@ -78,38 +75,32 @@ class LoginScreen extends React.Component {
 
     // })
 
-    // fetch('https://graph.facebook.com/v2.5/me?fields=email,name,friends&access_token=' + accessToken)
-    //   .then((response) => { return response.json() })
-    //   .then((json) => {
-    //     console.table(json);
+    fetch('https://graph.facebook.com/v2.5/me?fields=email,name,friends&access_token=' + accessToken)
+      .then((response) => { return response.json() })
+      .then((json) => {
+        console.table(json);
 
+        onSignIn();
+        navigate('ToDoList', {
+          social_name: json.name,
+          social_id: json.id,
+          social_loggedIn: true,
+          social_email: json.email,
+          auth_token: accessToken
+        });
+        // this.setState({
+        //   auth_token: accessToken,
+        //   social_name: json.name,
+        //   social_id: json.id,
+        //   social_loggedIn: true,
+        //   social_email: json.email
+        // })
 
-    //     navigate('ToDoList', {
-    //       social_name: json.name,
-    //       social_id: json.id,
-    //       social_loggedIn: true,
-    //       social_email: json.email,
-    //       auth_token: accessToken
-    //     });
-
-
-    //     // this.setState({
-    //     //   auth_token: accessToken,
-    //     //   social_name: json.name,
-    //     //   social_id: json.id,
-    //     //   social_loggedIn: true,
-    //     //   social_email: json.email
-    //     // })
-
-
-    //     console.log(this.state.social_name);
-
-
-
-    //   })
-    //   .catch((err) => {
-    //     console.log('ERROR GETTING DATA FROM FACEBOOK', err);
-    //   })
+        console.log(this.state.social_name);
+      })
+      .catch((err) => {
+        console.log('ERROR GETTING DATA FROM FACEBOOK', err);
+      })
   }
 
   _fbAuth() {
@@ -118,33 +109,33 @@ class LoginScreen extends React.Component {
 
     console.log('called');
 
-    that.initUser('aaaa');
+    //    that.initUser('aaaa');
 
 
-    // LoginManager.logInWithReadPermissions(['public_profile', 'email']).then(function (result) {
-    //   if (result.isCancelled) {
-    //     alert(JSON.stringfy(result));
-    //     alert("Login Cancelled");
-    //     that.setState({
-    //       error: 'Login Canelled by User'
-    //     })
-    //   } else {
-    //     AccessToken.getCurrentAccessToken().then(
-    //       (data) => {
-    //         const { accessToken } = data;
-    //         //alert(data.accessToken.toString())
-    //         console.log('data', data);
-    //         //console.log('............. ', that.state.user_name);
-    //         that.initUser(accessToken);
-    //       }
-    //     )
-    //   }
-    // }, function (error) {
-    //   alert("some error occurred!!");
-    //   that.setState({
-    //     error: 'Something went wrong'
-    //   })
-    // })
+    LoginManager.logInWithReadPermissions(['public_profile', 'email']).then(function (result) {
+      if (result.isCancelled) {
+        alert(JSON.stringfy(result));
+        alert("Login Cancelled");
+        that.setState({
+          error: 'Login Canelled by User'
+        })
+      } else {
+        AccessToken.getCurrentAccessToken().then(
+          (data) => {
+            const { accessToken } = data;
+            //alert(data.accessToken.toString())
+            console.log('data', data);
+            //console.log('............. ', that.state.user_name);
+            that.initUser(accessToken);
+          }
+        )
+      }
+    }, function (error) {
+      alert("some error occurred!!");
+      that.setState({
+        error: 'Something went wrong'
+      })
+    })
   }
 
   componentDidMount() {

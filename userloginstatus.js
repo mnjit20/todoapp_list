@@ -12,11 +12,7 @@ class UserLoginStatus extends Component {
     return (
       <View styles={styles.container}>
         <View styles={styles.buttons}>
-          {/* <TouchableOpacity>
-            <Text> Hi {this.props.name}</Text>
-          </TouchableOpacity> */}
           <TouchableOpacity onPress={this.props.onClick}>
-            {/* <Button title={'Hi ' + this.props.name + ' logout '} /> */}
             <Text> {'Hi ' + this.props.name + ' Logout'} </Text>
           </TouchableOpacity>
         </View>

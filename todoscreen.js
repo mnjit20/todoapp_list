@@ -34,6 +34,7 @@ class TodoScreen extends React.Component {
       auth_token: props.navigation.state.params.auth_token
     }
 
+    this.dataFromLocalStore = this.dataFromLocalStore.bind(this);
     this.returnLoggedInUser = this.returnLoggedInUser.bind(this);
     this.handleSignOut = this.handleSignOut.bind(this);
     this.handleUpdateText = this.handleUpdateText.bind(this);
@@ -51,32 +52,43 @@ class TodoScreen extends React.Component {
 
   componentWillMount = () => {
     console.log('componentWillMount==== ');
-    axios.get('http://192.168.0.102:5000/api/todo/email/mnjit1989@gmail.com')
+    axios.get('http://192.168.0.102:5000/api/todo/email/' + this.state.social_email)
       .then((response) => {
         // handle success
         data = response.data;
 
         this.setSource(data, data);
       })
-      .catch(function (error) {
+      .catch((error) => {
         // handle error
+
+        this.dataFromLocalStore();
+
         console.log(error);
+
+        //incase data is not loaded from server then load it locally.
       })
       .then(function () {
         // always executed
       });
 
-    // AsyncStorage.getItem(this.state.social_name).then((json) => {
-    //   console.log('AsyncStorage.getItem==', json, this.state.social_name)
-    //   try {
 
-    //     const items = JSON.parse(json);
-    //     console.log(items);
-    //     this.setSource(items, items);
-    //   } catch (error) {
+  }
 
-    //   }
-    // })
+
+  dataFromLocalStore() {
+    console.log('****** Theres some error loading from network, loading local todos ******');
+    console.log('**************** dataFromLocalStore called');
+    AsyncStorage.getItem(this.state.social_name).then((json) => {
+      console.log('AsyncStorage.getItem==', json, this.state.social_name)
+      try {
+        const items = JSON.parse(json);
+        console.log(items);
+        this.setSource(items, items);
+      } catch (error) {
+
+      }
+    })
   }
 
 
@@ -98,49 +110,6 @@ class TodoScreen extends React.Component {
   }
 
 
-  // getData(url){
-
-  //   fetch('http://192.168.0.102:5000/'+url, {
-  //     method: 'get', mode: 'no-cors'
-  //   }).then((response) => response.json())
-
-  // }
-
-  // getData(apiUrl) {
-  //   fetch('http://192.168.0.102:5000/' + apiUrl, {
-  //     mode: "no-cors",
-  //     headers:{
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //     .then(
-  //       function (response) {
-  //         if (response.status !== 200) {
-  //           console.log('Looks like there was a problem. Status Code: ' +
-  //             response.status);
-  //           return;
-  //         }
-
-  //         // Examine the text in the response
-  //         response.json().then(function (data) {
-  //           console.log(data);
-  //         });
-  //       }
-  //     )
-  //     .catch(function (err) {
-  //       console.log('Fetch Error :-S', err);
-  //     });
-
-  // }
-
-
-  // postData() {
-  //   return fetch('http://localhost:5000/'+api)
-  //     .then((response) => response.json())
-  //     .catch((error) => {
-  //       console.error(error);
-  //     });
-  // }
 
 
   setSource(items, itemsDatasource, otherState = {}) {
@@ -155,15 +124,7 @@ class TodoScreen extends React.Component {
 
     console.log("items", items);
     console.log('itemsDatasource', itemsDatasource)
-    // aa = {
-    //   "name": "manjeet",
-    //   "email": "aa@aa.com",
-    //   "task_name": "this is a task",
-    //   "task_status": "true",
-    //   "date": "2018-07-21T10:54:38.112Z",
-    // }
 
-    //    this.postData('api/todo/save', aa);
 
   }
 
