@@ -5,13 +5,15 @@ import { StyleSheet, Text, Button, View, Platform, ListView, Keyboard, Touchable
 import { LoginButton, AccessToken, LoginManager } from 'react-native-fbsdk';
 
 const USER_KEY = "auth-demo-key";
-const onSignIn = () => { AsyncStorage.setItem(USER_KEY, "true"); console.log('AsyncStorage key set'); }
+
+const onSignIn = (json) => { AsyncStorage.setItem(USER_KEY, JSON.stringify(json)); console.log('AsyncStorage key set'); }
 
 const isSignedIn = () => {
   console.log('inside ======== isSignedIn');
   return new Promise((resolve, reject) => {
     AsyncStorage.getItem(USER_KEY)
       .then(res => {
+        console.log('AsyncStorage Auth ', res);
         if (res !== null) {
           resolve(true);
           console.log('inside ======== isSignedIn : yes');
@@ -80,7 +82,15 @@ class LoginScreen extends React.Component {
       .then((json) => {
         console.table(json);
 
-        onSignIn();
+        const user_json = {
+          "social_name": json.name,
+          "social_id": json.id,
+          "social_loggedIn": true,
+          "social_email": json.email,
+          "auth_token": accessToken
+        }
+        console.log('user_json', user_json);
+        onSignIn(user_json);
         navigate('ToDoList', {
           social_name: json.name,
           social_id: json.id,
@@ -88,6 +98,7 @@ class LoginScreen extends React.Component {
           social_email: json.email,
           auth_token: accessToken
         });
+
         // this.setState({
         //   auth_token: accessToken,
         //   social_name: json.name,
@@ -155,15 +166,31 @@ class LoginScreen extends React.Component {
 
     if (signedIn) {
       console.log('signedIn :', signedIn);
-      navigate('ToDoList', {
-        social_name: 'Manjeet',
-        social_id: "10919102982992",
-        social_email: "mnjit1989@gmail.com"
-      });
+
+      AsyncStorage.getItem(USER_KEY).then((json) => {
+        console.log('AsyncStorage.USER_KEY==', json)
+        try {
+          let user_data = JSON.parse(json);
+          console.log("user_data", user_data);
+
+
+          navigate('ToDoList', {
+            // social_name: 'Manjeet',
+            // social_id: "10919102982992",
+            // social_email: "mnjit1989@gmail.com"
+
+            social_name: user_data.social_name,
+            social_id: user_data.social_id,
+            social_email: user_data.social_email
+          });
+
+        } catch (error) {
+          console.log(error);
+        }
+      })
 
 
       return (
-
         < Button
           title="Logout"
           onPress={this._fbAuth.bind(this)}

@@ -7,6 +7,7 @@ import Item from './item';
 import UserLoginStatus from './userloginstatus';
 import axios from 'axios';
 const USER_KEY = "auth-demo-key";
+const API_SERVER_URL = 'https://stormy-refuge-63806.herokuapp.com/';
 
 const filterItems = (filter, items) => {
   return items.filter((item) => {
@@ -52,7 +53,7 @@ class TodoScreen extends React.Component {
 
   componentWillMount = () => {
     console.log('componentWillMount==== ');
-    axios.get('http://192.168.0.102:5000/api/todo/email/' + this.state.social_email)
+    axios.get(API_SERVER_URL + 'api/todo/email/' + this.state.social_email)
       .then((response) => {
         // handle success
         data = response.data;
@@ -96,7 +97,7 @@ class TodoScreen extends React.Component {
 
   postData(apiUrl, json) {
     console.log('==========', apiUrl, json);
-    fetch('http://192.168.0.102:5000/' + apiUrl, {
+    fetch(API_SERVER_URL + apiUrl, {
       method: 'POST',
       mode: "no-cors",
       headers: {
@@ -212,7 +213,10 @@ class TodoScreen extends React.Component {
       console.log('signed out done');
       const { navigate } = this.props.navigation;
       console.log('Log out called ---> navigate to login screen');
-      navigate('Login', {});
+      setTimeout(() => {
+        navigate('Login', {});
+      }, 500);
+
     });
 
   }
