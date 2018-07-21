@@ -27,20 +27,17 @@ Below you'll find information about performing common tasks. The most recent ver
   * [QR Code does not scan](#qr-code-does-not-scan)
 
 ## Todoapp using the React native
-This is a sample app using the react native, it can work on both Android and iOS platforms; all the libraries which I have used are standard libraries.
+This is a prototype of todo app implementation using the react native
+
+It can work on both Android and iOS platforms; all the libraries which I have used are standard libraries.
 
 * It has facebook login using the [react-native-fbsdk](https://www.npmjs.com/package/react-native-fbsdk)
 * You can do basic crud operations in it like add, remove, update todos
 * User todo's are getting saved in Mongo DB which is hosted on a free server [mlab](https://mlab.com) and API Server are created using Node/Express which is hosted on Heroku free account. [SampleApi](https://stormy-refuge-63806.herokuapp.com/api/todo/test) 
+* API_URL where todos are getting saved: [https://stormy-refuge-63806.herokuapp.com/api/todo/email/mnjit1989@gmail.com](https://stormy-refuge-63806.herokuapp.com/api/todo/email/mnjit1989@gmail.com) you can pass your email id at the end to see your saved todo items on the server.
 
+##### Available scripts are
 
-## Updating to New Releases
-
-You should only need to update the global installation of `create-react-native-app` very rarely, ideally never.
-
-Updating the `react-native-scripts` dependency of your app should be as simple as bumping the version number in `package.json` and reinstalling your project's dependencies.
-
-Upgrading to a new version of React Native requires updating the `react-native`, `react`, and `expo` package versions, and setting the correct `sdkVersion` in `app.json`. See the [versioning guide](https://github.com/react-community/create-react-native-app/blob/master/VERSIONS.md) for up-to-date information about package version compatibility.
 
 ## Available Scripts
 
@@ -189,21 +186,3 @@ If this works, but you're still unable to load your app by scanning the QR code,
 If you're not able to load the `http` URL in your phone's web browser, try using the tethering/mobile hotspot feature on your phone (beware of data usage, though), connecting your computer to that WiFi network, and restarting the packager. If you are using a VPN you may need to disable it.
 
 ### iOS Simulator won't open
-
-If you're on a Mac, there are a few errors that users sometimes see when attempting to `npm run ios`:
-
-* "non-zero exit code: 107"
-* "You may need to install Xcode" but it is already installed
-* and others
-
-There are a few steps you may want to take to troubleshoot these kinds of errors:
-
-1. Make sure Xcode is installed and open it to accept the license agreement if it prompts you. You can install it from the Mac App Store.
-2. Open Xcode's Preferences, the Locations tab, and make sure that the `Command Line Tools` menu option is set to something. Sometimes when the CLI tools are first installed by Homebrew this option is left blank, which can prevent Apple utilities from finding the simulator. Make sure to re-run `npm/yarn run ios` after doing so.
-3. If that doesn't work, open the Simulator, and under the app menu select `Reset Contents and Settings...`. After that has finished, quit the Simulator, and re-run `npm/yarn run ios`.
-
-### QR Code does not scan
-
-If you're not able to scan the QR code, make sure your phone's camera is focusing correctly, and also make sure that the contrast on the two colors in your terminal is high enough. For example, WebStorm's default themes may [not have enough contrast](https://github.com/react-community/create-react-native-app/issues/49) for terminal QR codes to be scannable with the system barcode scanners that the Expo app uses.
-
-If this causes problems for you, you may want to try changing your terminal's color theme to have more contrast, or running Create React Native App from a different terminal. You can also manually enter the URL printed by the packager script in the Expo app's search bar to load it manually.
