@@ -59,14 +59,54 @@ class TodoScreen extends React.Component {
   }
 
 
+  postTodoDataToServer(api, json) {
+    console.log('==========', api, json);
+
+    fetch('http://192.168.0.102:5000/' + api, {
+      method: 'POST',
+      mode: "no-cors",
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(json),
+    }).catch(function (err) {
+      console.log("err from posttodo", err);
+    });
+  }
+
+
+  // postTodoDataToServer() {
+  //   return fetch('http://localhost:5000/'+api)
+  //     .then((response) => response.json())
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // }
+
+
   setSource(items, itemsDatasource, otherState = {}) {
     this.setState({
       items,
       dataSource: this.state.dataSource.cloneWithRows(itemsDatasource),
       ...otherState
     })
-    console.log('setSource==', items, itemsDatasource);
+    //console.log('setSource==', items, itemsDatasource);
+
     AsyncStorage.setItem(this.state.social_name, JSON.stringify(items));
+
+    console.log("items", items);
+    console.log('itemsDatasource', itemsDatasource)
+    // aa = {
+    //   "name": "manjeet",
+    //   "email": "aa@aa.com",
+    //   "task_name": "this is a task",
+    //   "task_status": "true",
+    //   "date": "2018-07-21T10:54:38.112Z",
+    // }
+
+    //    this.postTodoDataToServer('api/todo/save', aa);
+
   }
 
   handleToggleComplete(key, complete) {
@@ -98,6 +138,15 @@ class TodoScreen extends React.Component {
     ]
     this.setSource(newItems, newItems, { value: "" });
     console.table(newItems);
+
+    json = {
+      "key": Date.now(),
+      "task_name": this.state.value,
+      "name": this.state.social_name,
+      "email": this.state.social_email,
+      "task_status": false
+    }
+    this.postTodoDataToServer('api/todo/save', json);
   }
 
   handleRemove(key) {

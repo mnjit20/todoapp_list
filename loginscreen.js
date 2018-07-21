@@ -41,7 +41,8 @@ class LoginScreen extends React.Component {
 
     navigate('ToDoList', {
       social_name: 'Manjeet',
-
+      social_id: "10919102982992",
+      social_email: "mnjit1989@gmail.com"
     });
 
 
@@ -50,7 +51,7 @@ class LoginScreen extends React.Component {
     //   social_name: 'manjeet verma',
     //   social_id: 'json.id',
     //   social_loggedIn: true,
-    //   social_emmail: 'json.email'
+    //   social_email: 'json.email'
 
     // })
 
