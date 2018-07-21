@@ -1,11 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, Button, View, Platform, ListView, Keyboard } from 'react-native';
+import { StyleSheet, Text, Button, View, Platform, ListView, Keyboard, AsyncStorage } from 'react-native';
 
 import Header from './header';
 import Footer from './footer';
 import Item from './item';
 import UserLoginStatus from './userloginstatus';
 
+
+const filterItems = (filter, items) => {
+  return items.filter((item) => {
+    if (filter === "ALL") return true;
+    if (filter === "COMPLETED") return item.complete;
+    if (filter === "ACTIVE") return !item.complete;
+  })
+}
 
 
 class TodoScreen extends React.Component {
@@ -25,6 +33,8 @@ class TodoScreen extends React.Component {
       auth_token: props.navigation.state.params.auth_token
     }
 
+    this.handleUpdateText = this.handleUpdateText.bind(this);
+    this.handleToggleEditing = this.handleToggleEditing.bind(this);
     this.handleAddItems = this.handleAddItems.bind(this);
     this.setSource = this.setSource.bind(this);
     this.handleToggleComplete = this.handleToggleComplete.bind(this);
@@ -36,6 +46,18 @@ class TodoScreen extends React.Component {
     title: 'ToDo App task'
   };
 
+  componentWillMount = () => {
+    AsyncStorage.getItem(this.state.social_name).then((json) => {
+      console.log('AsyncStorage.getItem==', json, this.state.social_name)
+      try {
+        const items = JSON.parse(json);
+        this.setSource(items, items);
+      } catch (error) {
+
+      }
+    })
+  }
+
 
   setSource(items, itemsDatasource, otherState = {}) {
     this.setState({
@@ -43,6 +65,8 @@ class TodoScreen extends React.Component {
       dataSource: this.state.dataSource.cloneWithRows(itemsDatasource),
       ...otherState
     })
+    console.log('setSource==', items, itemsDatasource);
+    AsyncStorage.setItem(this.state.social_name, JSON.stringify(items));
   }
 
   handleToggleComplete(key, complete) {
@@ -58,6 +82,9 @@ class TodoScreen extends React.Component {
 
   }
 
+  handleFilter(filter) {
+    this.setSource(this.state.items, filterItems(filter, this.state.items), { filter });
+  }
 
   handleAddItems() {
     if (!this.state.value) return;
@@ -79,6 +106,28 @@ class TodoScreen extends React.Component {
       return item.key != key
     })
     this.setSource(newItems, newItems);
+  }
+  handleUpdateText(key, text) {
+    const newItems = this.state.items.map((item) => {
+      if (item.key != key) return item;
+      return {
+        ...item,
+        text
+      }
+    })
+    this.setSource(newItems, filterItems(this.state.filter, newItems));
+  }
+
+
+  handleToggleEditing(key, editing) {
+    const newItems = this.state.items.map((item) => {
+      if (item.key != key) return item;
+      return {
+        ...item,
+        editing
+      }
+    })
+    this.setSource(newItems, filterItems(this.state.filter, newItems));
   }
 
   static navigationOptions = {
@@ -114,6 +163,8 @@ class TodoScreen extends React.Component {
                   xyz={'aa'}
                   key={key}
                   onRemove={() => this.handleRemove(key)}
+                  onUpdate={(text) => this.handleUpdate(key, text)}
+                  onToggleEdit={(editing) => this.handleToggleEditing(key, editing)}
                   onComplete={(complete) => this.handleToggleComplete(key, complete)}
                   {...value}
                 />
@@ -147,6 +198,8 @@ class TodoScreen extends React.Component {
 
 
 const styles = StyleSheet.create({
+
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
