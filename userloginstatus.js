@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, TouchableOpacity } from 'react-native';
 
 
 class UserLoginStatus extends Component {
   constructor(props) {
     super(props);
   }
+
+
   render() {
     return (
       <View styles={styles.container}>
         <View styles={styles.buttons}>
-          <TouchableOpacity>
+          {/* <TouchableOpacity>
             <Text> Hi {this.props.name}</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text> Logout </Text>
+          </TouchableOpacity> */}
+          <TouchableOpacity onPress={this.props.onClick}>
+            {/* <Button title={'Hi ' + this.props.name + ' logout '} /> */}
+            <Text> {'Hi ' + this.props.name + ' Logout'} </Text>
           </TouchableOpacity>
         </View>
       </View>

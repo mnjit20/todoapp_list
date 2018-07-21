@@ -6,7 +6,7 @@ import { LoginButton, AccessToken, LoginManager } from 'react-native-fbsdk';
 
 const USER_KEY = "auth-demo-key";
 const onSignIn = () => { AsyncStorage.setItem(USER_KEY, "true"); console.log('AsyncStorage key set'); }
-const onSignOut = () => { AsyncStorage.removeItem(USER_KEY); console.log('AsyncStorage key removed'); }
+
 const isSignedIn = () => {
   console.log('inside ======== isSignedIn');
   return new Promise((resolve, reject) => {
@@ -36,7 +36,9 @@ class LoginScreen extends React.Component {
       social_loggedIn: "",
       social_email: "",
       auth_token: "",
-      error: ''
+      error: '',
+      signedIn: false,
+      checkedSignIn: false
     }
 
     //    this.handleSocialLoginSubmit = this.handleSocialLoginSubmit.bind(this);
@@ -145,16 +147,55 @@ class LoginScreen extends React.Component {
     // })
   }
 
+  componentDidMount() {
+    isSignedIn()
+      .then(res => this.setState({ signedIn: res, checkedSignIn: true }))
+      .catch(err => alert("An error occurred"));
+  }
+
 
   render() {
+    const { checkedSignIn, signedIn } = this.state;
+    const { navigate } = this.props.navigation;
 
-    console.log(isSignedIn());
-    return (
-      <Button
-        title="Click to Login using Facebook"
-        onPress={this._fbAuth.bind(this)}
-      />
-    );
+    if (!checkedSignIn) {
+      return null;
+    }
+
+    if (signedIn) {
+      console.log('signedIn :', signedIn);
+      navigate('ToDoList', {
+        social_name: 'Manjeet',
+        social_id: "10919102982992",
+        social_email: "mnjit1989@gmail.com"
+      });
+
+
+      return (
+
+        < Button
+          title="Logout"
+          onPress={this._fbAuth.bind(this)}
+        />
+      )
+    } else {
+      console.log('signedIn :', signedIn);
+      return (
+        <Button
+          title="Click to Login using Facebook"
+          onPress={this._fbAuth.bind(this)}
+        />
+      )
+    }
+
+
+
+    // return (
+    //   <Button
+    //     title="Click to Login using Facebook"
+    //     onPress={this._fbAuth.bind(this)}
+    //   />
+    // );
   }
 }
 

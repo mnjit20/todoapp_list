@@ -37,7 +37,6 @@ class Item extends Component {
       </View>
     )
 
-    console.log('this.props item ', this.props);
     return (
       <View style={styles.container}>
         <Switch

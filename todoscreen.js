@@ -5,7 +5,8 @@ import Header from './header';
 import Footer from './footer';
 import Item from './item';
 import UserLoginStatus from './userloginstatus';
-
+import axios from 'axios';
+const USER_KEY = "auth-demo-key";
 
 const filterItems = (filter, items) => {
   return items.filter((item) => {
@@ -19,7 +20,7 @@ const filterItems = (filter, items) => {
 class TodoScreen extends React.Component {
   constructor(props) {
     super(props);
-    console.log('aaaaaaaaaaaaaaa', props.navigation);
+    console.log('props.navigation ==', props.navigation);
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
     this.state = {
@@ -33,13 +34,15 @@ class TodoScreen extends React.Component {
       auth_token: props.navigation.state.params.auth_token
     }
 
+    this.returnLoggedInUser = this.returnLoggedInUser.bind(this);
+    this.handleSignOut = this.handleSignOut.bind(this);
     this.handleUpdateText = this.handleUpdateText.bind(this);
     this.handleToggleEditing = this.handleToggleEditing.bind(this);
     this.handleAddItems = this.handleAddItems.bind(this);
     this.setSource = this.setSource.bind(this);
     this.handleToggleComplete = this.handleToggleComplete.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
-    
+
   }
 
   static navigationOptions = {
@@ -48,21 +51,40 @@ class TodoScreen extends React.Component {
 
   componentWillMount = () => {
     console.log('componentWillMount==== ');
-    AsyncStorage.getItem(this.state.social_name).then((json) => {
-      console.log('AsyncStorage.getItem==', json, this.state.social_name)
-      try {
-        const items = JSON.parse(json);
-        this.setSource(items, items);
-      } catch (error) {
+    axios.get('http://192.168.0.102:5000/api/todo/email/mnjit1989@gmail.com')
+      .then((response) => {
+        // handle success
+        data = response.data;
 
-      }
-    })
+        this.setSource(data, data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+
+    // AsyncStorage.getItem(this.state.social_name).then((json) => {
+    //   console.log('AsyncStorage.getItem==', json, this.state.social_name)
+    //   try {
+
+    //     const items = JSON.parse(json);
+    //     console.log(items);
+    //     this.setSource(items, items);
+    //   } catch (error) {
+
+    //   }
+    // })
   }
 
 
-  postTodoDataToServer(api, json) {
-    console.log('==========', api, json);
-    fetch('http://192.168.0.102:5000/' + api, {
+
+
+  postData(apiUrl, json) {
+    console.log('==========', apiUrl, json);
+    fetch('http://192.168.0.102:5000/' + apiUrl, {
       method: 'POST',
       mode: "no-cors",
       headers: {
@@ -76,7 +98,43 @@ class TodoScreen extends React.Component {
   }
 
 
-  // postTodoDataToServer() {
+  // getData(url){
+
+  //   fetch('http://192.168.0.102:5000/'+url, {
+  //     method: 'get', mode: 'no-cors'
+  //   }).then((response) => response.json())
+
+  // }
+
+  // getData(apiUrl) {
+  //   fetch('http://192.168.0.102:5000/' + apiUrl, {
+  //     mode: "no-cors",
+  //     headers:{
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
+  //     .then(
+  //       function (response) {
+  //         if (response.status !== 200) {
+  //           console.log('Looks like there was a problem. Status Code: ' +
+  //             response.status);
+  //           return;
+  //         }
+
+  //         // Examine the text in the response
+  //         response.json().then(function (data) {
+  //           console.log(data);
+  //         });
+  //       }
+  //     )
+  //     .catch(function (err) {
+  //       console.log('Fetch Error :-S', err);
+  //     });
+
+  // }
+
+
+  // postData() {
   //   return fetch('http://localhost:5000/'+api)
   //     .then((response) => response.json())
   //     .catch((error) => {
@@ -105,7 +163,7 @@ class TodoScreen extends React.Component {
     //   "date": "2018-07-21T10:54:38.112Z",
     // }
 
-    //    this.postTodoDataToServer('api/todo/save', aa);
+    //    this.postData('api/todo/save', aa);
 
   }
 
@@ -141,12 +199,12 @@ class TodoScreen extends React.Component {
 
     json = {
       "key": Date.now(),
-      "task_name": this.state.value,
+      "text": this.state.value,
       "name": this.state.social_name,
       "email": this.state.social_email,
-      "task_status": false
+      "complete": false
     }
-    this.postTodoDataToServer('api/todo/save', json);
+    this.postData('api/todo/save', json);
   }
 
   handleRemove(key) {
@@ -179,9 +237,25 @@ class TodoScreen extends React.Component {
     this.setSource(newItems, filterItems(this.state.filter, newItems));
   }
 
+  returnLoggedInUser() {
+    console.log('this.state.social_name', this.state.social_name);
+    return this.state.social_name;
+  }
   static navigationOptions = {
-    title: 'Your ToDo App',
+    title: 'Your ToDo App'
   };
+
+  handleSignOut() {
+    console.log('AsyncStorage key removed');
+    AsyncStorage.removeItem(USER_KEY).then(res => {
+      console.log('signed out done');
+      const { navigate } = this.props.navigation;
+      console.log('Log out called ---> navigate to login screen');
+      navigate('Login', {});
+    });
+
+  }
+
 
   render() {
     const { navigate } = this.props.navigation;
@@ -189,8 +263,8 @@ class TodoScreen extends React.Component {
 
       <View style={styles.container}>
         <UserLoginStatus
+          onClick={this.handleSignOut}
           name={this.state.social_name}
-
         />
 
         <Header
