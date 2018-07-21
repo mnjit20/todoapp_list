@@ -39,7 +39,7 @@ class TodoScreen extends React.Component {
     this.setSource = this.setSource.bind(this);
     this.handleToggleComplete = this.handleToggleComplete.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
-    console.log('this', this);
+    
   }
 
   static navigationOptions = {
@@ -47,6 +47,7 @@ class TodoScreen extends React.Component {
   };
 
   componentWillMount = () => {
+    console.log('componentWillMount==== ');
     AsyncStorage.getItem(this.state.social_name).then((json) => {
       console.log('AsyncStorage.getItem==', json, this.state.social_name)
       try {
@@ -61,7 +62,6 @@ class TodoScreen extends React.Component {
 
   postTodoDataToServer(api, json) {
     console.log('==========', api, json);
-
     fetch('http://192.168.0.102:5000/' + api, {
       method: 'POST',
       mode: "no-cors",

@@ -1,9 +1,28 @@
 import React, { Component } from 'react'
 
-import { StyleSheet, Text, Button, View, Platform, ListView, Keyboard, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, Button, View, Platform, ListView, Keyboard, TouchableOpacity, AsyncStorage } from 'react-native';
 
 import { LoginButton, AccessToken, LoginManager } from 'react-native-fbsdk';
 
+const USER_KEY = "auth-demo-key";
+const onSignIn = () => { AsyncStorage.setItem(USER_KEY, "true"); console.log('AsyncStorage key set'); }
+const onSignOut = () => { AsyncStorage.removeItem(USER_KEY); console.log('AsyncStorage key removed'); }
+const isSignedIn = () => {
+  console.log('inside ======== isSignedIn');
+  return new Promise((resolve, reject) => {
+    AsyncStorage.getItem(USER_KEY)
+      .then(res => {
+        if (res !== null) {
+          resolve(true);
+          console.log('inside ======== isSignedIn : yes');
+        } else {
+          resolve(false);
+          console.log('inside ======== isSignedIn : no');
+        }
+      })
+      .catch(err => reject(err));
+  });
+};
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -29,6 +48,7 @@ class LoginScreen extends React.Component {
     title: 'ToDo App',
   };
 
+
   initUser(accessToken) {
     var that = this;
     const { navigate } = this.props.navigation;
@@ -38,6 +58,7 @@ class LoginScreen extends React.Component {
     var user = {};
 
 
+    onSignIn();
 
     navigate('ToDoList', {
       social_name: 'Manjeet',
@@ -126,6 +147,8 @@ class LoginScreen extends React.Component {
 
 
   render() {
+
+    console.log(isSignedIn());
     return (
       <Button
         title="Click to Login using Facebook"
