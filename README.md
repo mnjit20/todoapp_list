@@ -26,6 +26,14 @@ Below you'll find information about performing common tasks. The most recent ver
   * [iOS Simulator won't open](#ios-simulator-wont-open)
   * [QR Code does not scan](#qr-code-does-not-scan)
 
+## Todoapp using the React native
+This is a sample app using the react native, it can work on both Android and iOS platforms; all the libraries which I have used are standard libraries.
+
+* It has facebook login using the [react-native-fbsdk](https://www.npmjs.com/package/react-native-fbsdk)
+* You can do basic crud operations in it like add, remove, update todos
+* User todo's are getting saved in Mongo DB which is hosted on a free server [mlab](https://mlab.com) and API Server are created using Node/Express which is hosted on Heroku free account. [SampleApi](https://stormy-refuge-63806.herokuapp.com/api/todo/test) 
+
+
 ## Updating to New Releases
 
 You should only need to update the global installation of `create-react-native-app` very rarely, ideally never.
