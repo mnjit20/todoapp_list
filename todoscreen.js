@@ -21,7 +21,7 @@ const filterItems = (filter, items) => {
 class TodoScreen extends React.Component {
   constructor(props) {
     super(props);
-    console.log('props.navigation ==', props.navigation);
+    // // console.log('props.navigation ==', props.navigation);
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
     this.state = {
@@ -52,7 +52,7 @@ class TodoScreen extends React.Component {
   };
 
   componentWillMount = () => {
-    console.log('componentWillMount==== ');
+    // // console.log('componentWillMount==== ');
     axios.get(API_SERVER_URL + 'api/todo/email/' + this.state.social_email)
       .then((response) => {
         // handle success
@@ -65,7 +65,7 @@ class TodoScreen extends React.Component {
 
         this.dataFromLocalStore();
 
-        console.log(error);
+        // console.log(error);
 
         //incase data is not loaded from server then load it locally.
       })
@@ -78,13 +78,13 @@ class TodoScreen extends React.Component {
 
 
   dataFromLocalStore() {
-    console.log('****** Theres some error loading from network, loading local todos ******');
-    console.log('**************** dataFromLocalStore called');
+    // console.log('****** Theres some error loading from network, loading local todos ******');
+    // console.log('**************** dataFromLocalStore called');
     AsyncStorage.getItem(this.state.social_name).then((json) => {
-      console.log('AsyncStorage.getItem==', json, this.state.social_name)
+      // console.log('AsyncStorage.getItem==', json, this.state.social_name)
       try {
         const items = JSON.parse(json);
-        console.log(items);
+        // console.log(items);
         this.setSource(items, items);
       } catch (error) {
 
@@ -96,7 +96,7 @@ class TodoScreen extends React.Component {
 
 
   postData(apiUrl, json) {
-    console.log('==========', apiUrl, json);
+    // console.log('==========', apiUrl, json);
     fetch(API_SERVER_URL + apiUrl, {
       method: 'POST',
       mode: "no-cors",
@@ -106,7 +106,7 @@ class TodoScreen extends React.Component {
       },
       body: JSON.stringify(json),
     }).catch(function (err) {
-      console.log("err from posttodo", err);
+      // console.log("err from posttodo", err);
     });
   }
 
@@ -119,12 +119,12 @@ class TodoScreen extends React.Component {
       dataSource: this.state.dataSource.cloneWithRows(itemsDatasource),
       ...otherState
     })
-    //console.log('setSource==', items, itemsDatasource);
+    // //console.log('setSource==', items, itemsDatasource);
 
     AsyncStorage.setItem(this.state.social_name, JSON.stringify(items));
 
-    console.log("items", items);
-    console.log('itemsDatasource', itemsDatasource)
+    // console.log("items", items);
+    // console.log('itemsDatasource', itemsDatasource)
 
 
   }
@@ -138,7 +138,7 @@ class TodoScreen extends React.Component {
       }
     })
     this.setSource(newItems, newItems);
-    console.table(newItems);
+    // //console.table(newItems);
 
   }
 
@@ -157,7 +157,7 @@ class TodoScreen extends React.Component {
       }
     ]
     this.setSource(newItems, newItems, { value: "" });
-    console.table(newItems);
+    // console.table(newItems);
 
     json = {
       "key": Date.now(),
@@ -171,7 +171,7 @@ class TodoScreen extends React.Component {
 
   handleRemove(key) {
     const newItems = this.state.items.filter((item) => {
-      console.log("item.key", item.key);
+      // // console.log("item.key", item.key);
       return item.key != key
     })
     this.setSource(newItems, newItems);
@@ -200,7 +200,7 @@ class TodoScreen extends React.Component {
   }
 
   returnLoggedInUser() {
-    console.log('this.state.social_name', this.state.social_name);
+    // // console.log('this.state.social_name', this.state.social_name);
     return this.state.social_name;
   }
   static navigationOptions = {
@@ -208,11 +208,11 @@ class TodoScreen extends React.Component {
   };
 
   handleSignOut() {
-    console.log('AsyncStorage key removed');
+    // // console.log('AsyncStorage key removed');
     AsyncStorage.removeItem(USER_KEY).then(res => {
-      console.log('signed out done');
+      // // console.log('signed out done');
       const { navigate } = this.props.navigation;
-      console.log('Log out called ---> navigate to login screen');
+      // // console.log('Log out called ---> navigate to login screen');
       setTimeout(() => {
         navigate('Login', {});
       }, 500);

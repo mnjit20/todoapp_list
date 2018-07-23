@@ -9,17 +9,17 @@ const USER_KEY = "auth-demo-key";
 const onSignIn = (json) => { AsyncStorage.setItem(USER_KEY, JSON.stringify(json)); console.log('AsyncStorage key set'); }
 
 const isSignedIn = () => {
-  console.log('inside ======== isSignedIn');
+  // console.log('inside ======== isSignedIn');
   return new Promise((resolve, reject) => {
     AsyncStorage.getItem(USER_KEY)
       .then(res => {
-        console.log('AsyncStorage Auth ', res);
+        // console.log('AsyncStorage Auth ', res);
         if (res !== null) {
           resolve(true);
-          console.log('inside ======== isSignedIn : yes');
+          // console.log('inside ======== isSignedIn : yes');
         } else {
           resolve(false);
-          console.log('inside ======== isSignedIn : no');
+          // console.log('inside ======== isSignedIn : no');
         }
       })
       .catch(err => reject(err));
@@ -30,7 +30,7 @@ class LoginScreen extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log('====inside constructto');
+    // console.log('====inside constructto');
 
     this.state = {
       social_name: "manjeet__",
@@ -53,9 +53,9 @@ class LoginScreen extends React.Component {
   initUser(accessToken) {
     var that = this;
     const { navigate } = this.props.navigation;
-    console.log('this === accessToken ', accessToken);
+    // console.log('this === accessToken ', accessToken);
 
-    console.log('init working');
+    // console.log('init working');
     var user = {};
 
 
@@ -80,7 +80,7 @@ class LoginScreen extends React.Component {
     fetch('https://graph.facebook.com/v2.5/me?fields=email,name,friends&access_token=' + accessToken)
       .then((response) => { return response.json() })
       .then((json) => {
-        console.table(json);
+        //console.table(json);
 
         const user_json = {
           "social_name": json.name,
@@ -89,7 +89,7 @@ class LoginScreen extends React.Component {
           "social_email": json.email,
           "auth_token": accessToken
         }
-        console.log('user_json', user_json);
+        // //console.log('user_json', user_json);
         onSignIn(user_json);
         navigate('ToDoList', {
           social_name: json.name,
@@ -107,10 +107,10 @@ class LoginScreen extends React.Component {
         //   social_email: json.email
         // })
 
-        console.log(this.state.social_name);
+        // //console.log(this.state.social_name);
       })
       .catch((err) => {
-        console.log('ERROR GETTING DATA FROM FACEBOOK', err);
+        // //   console.log('ERROR GETTING DATA FROM FACEBOOK', err);
       })
   }
 
@@ -118,7 +118,7 @@ class LoginScreen extends React.Component {
     var that = this;
 
 
-    console.log('called');
+    // // console.log('called');
 
     //    that.initUser('aaaa');
 
@@ -135,8 +135,8 @@ class LoginScreen extends React.Component {
           (data) => {
             const { accessToken } = data;
             //alert(data.accessToken.toString())
-            console.log('data', data);
-            //console.log('............. ', that.state.user_name);
+            // //console.log('data', data);
+            // //console.log('............. ', that.state.user_name);
             that.initUser(accessToken);
           }
         )
@@ -165,13 +165,13 @@ class LoginScreen extends React.Component {
     }
 
     if (signedIn) {
-      console.log('signedIn :', signedIn);
+      //console.log('signedIn :', signedIn);
 
       AsyncStorage.getItem(USER_KEY).then((json) => {
-        console.log('AsyncStorage.USER_KEY==', json)
+        //console.log('AsyncStorage.USER_KEY==', json)
         try {
           let user_data = JSON.parse(json);
-          console.log("user_data", user_data);
+          //console.log("user_data", user_data);
 
 
           navigate('ToDoList', {
@@ -185,7 +185,7 @@ class LoginScreen extends React.Component {
           });
 
         } catch (error) {
-          console.log(error);
+          //  console.log(error);
         }
       })
 
@@ -197,7 +197,7 @@ class LoginScreen extends React.Component {
         />
       )
     } else {
-      console.log('signedIn :', signedIn);
+      // console.log('signedIn :', signedIn);
       return (
         <Button
           title="Click to Login using Facebook"

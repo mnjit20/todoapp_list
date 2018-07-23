@@ -1,0 +1,4 @@
+#Mon Jul 23 13:47:22 IST 2018
+base.0=D\:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=D\:\\node\\react\\todoapp_list\\android\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex
